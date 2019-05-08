@@ -15,7 +15,7 @@ public class MessageSenderService {
 	private RabbitTemplate rabbitTemplate;
 	Random random = new Random();
 	
-	@Scheduled(fixedDelay = 10000, initialDelay = 5000)
+	@Scheduled(fixedDelay = 60000, initialDelay = 15000)
 	public void sendMessage() {
 	    CustomMessageBean customBean1=new CustomMessageBean("PRODUCT1", 10+random.nextInt(90));
         CustomMessageBean customBean2=new CustomMessageBean("PRODUCT2", 10+random.nextInt(90));

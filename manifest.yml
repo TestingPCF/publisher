@@ -1,9 +1,9 @@
 ---
 applications:
-- name: publisher-mq-test
+- name: worker-app
   path: ./target/publisher-0.0.1-SNAPSHOT.war
   memory: 768M
   random-route: true
   buildpack: java_buildpack_offline
   services:
-  - rabbitmq-service
+  - worker-mq
